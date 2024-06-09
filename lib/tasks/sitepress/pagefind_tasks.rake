@@ -26,7 +26,7 @@ namespace :sitepress do
   end
 end
 
-unless ENV["SKIP_SITEPRESS_BUILD"]
+unless ENV["SKIP_SITEPRESS_PAGEFIND_BUILD"]
   if Rake::Task.task_defined?("assets:precompile")
     Rake::Task["assets:precompile"].enhance(["sitepress:pagefind:build"])
   end
