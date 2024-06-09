@@ -1,5 +1,5 @@
 require "sitepress/pagefind/version"
-require "sitepress/pagefind/railtie"
+require "sitepress/pagefind/engine"
 
 module Sitepress
   module Pagefind
