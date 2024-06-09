@@ -6,8 +6,10 @@ namespace :sitepress do
       build_path = Rails.root.join("tmp/sitepress")
       pagefind_output_path = Rails.root.join("public/pagefind")
 
-      puts "Purging output directory"
-      FileUtils.rm_r build_path
+      if File.exist? build_path
+        puts "Purging output directory"
+        FileUtils.rm_r build_path 
+      end
 
       compiler = Sitepress::Compiler::Files.new(root_path: build_path, site:)
 
